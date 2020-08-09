@@ -1,12 +1,21 @@
 import React from 'react'
 
-import { Container, Title, GoBack } from './styles'
+import { IoIosClose } from 'react-icons/io'
 
-const Header = () => {
+import { Container, TopWrapper, Logo, Title } from './styles'
+import logoImg from '../../assets/images/logo.svg'
+import { Link } from 'react-router-dom'
+
+const Header: React.FC = ({ children }) => {
   return (
     <Container>
-      <Title>Brodev</Title>
-      <GoBack />
+      <TopWrapper>
+        <Logo src={logoImg} alt="Brodev" />
+        <Link to="/">
+          <IoIosClose />
+        </Link>
+      </TopWrapper>
+      <Title>{children}</Title>
     </Container>
   )
 }

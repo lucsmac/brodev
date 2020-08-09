@@ -60,17 +60,20 @@ export const ButtonsGroup = styled.div`
   flex-direction: column;
   max-width: 100%;
 
-  > button + button {
-    margin-top: 0.6rem;
-
-    color: var(--tertiary);
+  > a + a {
+    button {
+      margin-top: 0.6rem;
+      color: var(--tertiary);
+    }
   }
 
   @media (min-width: 760px) {
     flex-direction: row;
 
-    > button + button {
-      margin-top: 0;
+    > a + a {
+      button {
+        margin-top: 0;
+      }
     }
   }
 `
