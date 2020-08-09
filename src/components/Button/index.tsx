@@ -9,7 +9,7 @@ const ButtonContainer = styled.button`
   background-color: ${(props) => props.color ? props.color : 'var(--tertyary)'};
   color: var(--white);
 
-  padding: 16px 40px;
+  padding: 18px 40px;
   width: 20rem;
   border-radius: 8px;
   border: 2px solid var(--tertiary);

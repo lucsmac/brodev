@@ -41,6 +41,7 @@ export const Hero = styled.div`
   @media (min-width: 720px) {
     > h2 {
       font-size: 1rem;
+      max-width: 450px;
     }
 
     > img {

@@ -6,8 +6,8 @@ export const Container = styled.header`
 
   background-color: var(--primary);
 
-  @media (min-width: 1100px) {
-    padding: 1rem 10rem;
+  @media (min-width: 960px) {
+    padding: 1rem 3rem;
   }
 `
 
@@ -68,7 +68,8 @@ export const Title = styled.strong`
     font-size: 1.4rem;
   }
 
-  @media (min-width: 1100px) {
+  @media (min-width: 960px) {
     max-width: 400px;
+    margin-left: 7rem;
   }
 `
