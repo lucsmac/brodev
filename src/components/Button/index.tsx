@@ -2,11 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 interface ButtonProps {
-  color?: string
+  color?: string,
+  className?: string
 }
 
 const ButtonContainer = styled.button`
-  background-color: ${(props) => props.color ? props.color : 'var(--tertyary)'};
+  background-color: ${(props) => props.color ? props.color : 'transparent'};
   color: var(--white);
 
   padding: 18px 40px;
@@ -27,9 +28,9 @@ const ButtonContainer = styled.button`
   }
 `
 
-const Button: React.FC<ButtonProps> = ({ color, children }) => {
+const Button: React.FC<ButtonProps> = ({ className, color, children }) => {
   return (
-    <ButtonContainer color={color} type="button">
+    <ButtonContainer className={className} color={color} type="button">
       {children}
     </ButtonContainer>
   )

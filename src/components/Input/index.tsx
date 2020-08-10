@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { InputHTMLAttributes } from 'react'
 import styled from 'styled-components'
 
-interface InputProps {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   type?: string,
   placeholder: string,
 }
@@ -11,7 +11,7 @@ const InputContainer = styled.label`
   font-family: Archivo;
   color: rgba(0, 0, 0, 0.2);
 
-  > input, > textarea {
+  > input {
     width: 100%;
     margin: .35rem 0;
     padding: .7rem .4rem;
@@ -21,17 +21,12 @@ const InputContainer = styled.label`
 
     background-color: rgba(0, 0, 0, 0.03);
   }
-
-  > textarea {
-    resize: none;
-    height: 10rem;
-  }
 `
 
-const Input: React.FC<InputProps> = ({ type, placeholder, children }) => {
+const Input: React.FC<InputProps> = ({ type, placeholder, ...rest }) => {
   return (
     <InputContainer>
-      {type && type === 'textarea' ? <textarea placeholder={placeholder} ></textarea> : <input type={type} placeholder={placeholder} />}
+      <input type={type} placeholder={placeholder} {...rest} />
     </InputContainer>
   )
 }

@@ -18,12 +18,20 @@ export default createGlobalStyle`
     --primary: #491D88;
     --secondary: #EF233C;
     --tertiary: #FFBA00;
-    --quaternary: #F17105;
-    --quinary: #43B5A0;
+    --quaternary: #80ED99;
+    --quinary: #FFE66D;
     --senary: #331A38;
   
     --white: #fff;
     --gray: #8a8c90;
     --dark: #010101;
+  }
+
+  button {
+    transition: all 0.2s;
+
+      &:hover {
+        transform: scale(.98);
+      }
   }
 `

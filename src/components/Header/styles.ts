@@ -67,6 +67,11 @@ export const Title = styled.strong`
   > span {
     font-size: 1.4rem;
   }
+  
+  @media (min-width: 760px) {
+    max-width: 400px;
+    margin-left: 3.5rem;
+  }
 
   @media (min-width: 960px) {
     max-width: 400px;
