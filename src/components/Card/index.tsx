@@ -5,8 +5,8 @@ import { CardContainer, ProfileImg, Name, Localization, Bio, Learned, ToLearn, T
 import { IoLogoGithub, IoLogoLinkedin, IoLogoInstagram } from 'react-icons/io'
 
 const Card = () => {
-  const learned = ['React', 'React Native', 'Vue', 'Next', 'React', 'React Native', 'Vue', 'Next']
-  const toLearn = ['Vue', 'Next', 'React', 'React Native', 'React', 'React Native', 'Vue', 'Next',]
+  const learned = ['React', 'React Native', 'Vue', 'Next']
+  const toLearn = ['Vue', 'Next', 'React', 'React Native']
 
   return (
     <CardContainer>

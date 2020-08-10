@@ -5,6 +5,7 @@ import Header from '../../components/Header'
 import SetHead from '../../components/SetHead'
 import Card from '../../components/Card'
 import Footer from '../../components/Footer'
+import SliderCard from '../../components/Slider'
 
 const DevsList = () => {
   return (
@@ -14,7 +15,14 @@ const DevsList = () => {
       <Header>Encontre um dev e entre em contato <span role="img" aria-label="hands">🤘</span></Header>
 
       <CardList>
-        <Card />
+        <SliderCard>
+          <Card key="1" />
+          <Card key="2" />
+          <Card key="3" />
+          <Card key="4" />
+          <Card key="5" />
+          <Card key="6" />
+        </SliderCard>
       </CardList>
 
       <Footer />

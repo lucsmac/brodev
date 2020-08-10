@@ -2,8 +2,10 @@ import styled from 'styled-components'
 
 export const CardContainer = styled.div`
   max-width: 470px;
+
   padding: 1rem;
   padding-top: 65px;
+  margin: 0 12px;
 
   background: var(--white);
 
@@ -16,11 +18,12 @@ export const CardContainer = styled.div`
 
   text-align: center;
 
-  box-shadow: rgba(0, 0, 0, .4) -3px 2px 10px;
+  box-shadow: rgba(0, 0, 0, .1) -3px 2px 10px;
   border-radius: 28px;
 
   @media (min-width: 560px) {
     padding-top: 90px;
+    margin: 0 24px;
 
     border-radius: 56px;
   }

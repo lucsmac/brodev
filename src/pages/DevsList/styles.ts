@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+  overflow-x: hidden;
 
   > header {
     padding-bottom: 75px;
@@ -16,15 +17,40 @@ export const Container = styled.div`
     }
 
     > section {
-      margin-top: -75px;
+      margin-top: -60px;
     }
   }
 `
 
 export const CardList = styled.section`
-  padding: 2rem 2rem 3rem 2rem;
+  padding: 2rem 1rem 3rem 1rem;
 
   @media (min-width: 760px) {
     padding: 2rem 4rem 4rem 4rem;
+  }
+
+  .slick-list {
+    overflow: visible;
+  }
+
+  .slick-arrow {
+    display: none !important;
+  }
+
+  .slick-slide {
+    width: auto !important;
+  }
+
+  .slick-dots {
+    bottom: -45px;
+  }
+
+  .slick-dots li button:before  {
+    font-size: .5rem;
+  }
+
+  .slick-dots li.slick-active button:before {
+    font-size: .8rem;
+    color: var(--primary);
   }
 `
