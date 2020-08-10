@@ -4,22 +4,34 @@ import { CardContainer, ProfileImg, Name, Localization, Bio, Learned, ToLearn, T
 
 import { IoLogoGithub, IoLogoLinkedin, IoLogoInstagram } from 'react-icons/io'
 
-const Card = () => {
-  const learned = ['React', 'React Native', 'Vue', 'Next']
-  const toLearn = ['Vue', 'Next', 'React', 'React Native']
+interface ProfileProps {
+  id: number,
+  name: string,
+  uf: string,
+  city: string,
+  avatar: string,
+  bio: string,
+  github: string,
+  linkedin: string,
+  instagram: string,
+  learned: string[],
+  toLearn: string[]
+}
+
+const Card: React.FC<ProfileProps> = ({ name, uf, city, avatar, bio, github, linkedin, instagram, learned, toLearn }) => {
 
   return (
     <CardContainer>
-      <ProfileImg src="https://avatars0.githubusercontent.com/u/55163413?s=460&u=4efcc2eba0c8f0ae229b2ea9c0ace6d18cb0a55f&v=4" alt="Lucas Macedo" />
-      <Name>Lucas Macedo</Name>
-      <Localization>Natal - RN</Localization>
-      <Bio>Me chamo Lucas (🇧🇷) e sou desenvolvedor web front-end. Criar soluções (encantadoras) através da engenharia sempre fez meus olhos brilharem 😍, isso contribuiu para que eu me especializasse em áreas como programação 😵 e UI/UX 😱.</Bio>
+      <ProfileImg src={avatar} alt={name} />
+      <Name>{name}</Name>
+      <Localization>{city} - {uf}</Localization>
+      <Bio>{bio}</Bio>
 
       <Learned>
         <ToolsTitle>Sou experiente em:</ToolsTitle>
         <ToolsContent color="var(--quaternary)">
-          {toLearn && toLearn.map((toLearnItem) => (
-            <li key={toLearnItem}>#{toLearnItem}</li>
+          {learned && learned.map((learnedItem) => (
+            <li key={learnedItem}>#{learnedItem}</li>
           ))}
         </ToolsContent>
       </Learned>
@@ -27,27 +39,36 @@ const Card = () => {
       <ToLearn>
         <ToolsTitle>Quero aprender</ToolsTitle>
         <ToolsContent color="var(--quinary)">
-          {learned && learned.map((learnedItem) => (
-            <li key={learnedItem}>#{learnedItem}</li>
+          {toLearn && toLearn.map((toLearnItem) => (
+            <li key={toLearnItem}>#{toLearnItem}</li>
           ))}
         </ToolsContent>
       </ToLearn>
 
       <ContactIcons>
         <Icon>
-          <a href="#">
-            <IoLogoGithub className="github" />
-          </a>
+          {github ? (
+            <a href={github}>
+              <IoLogoGithub className="github" />
+            </a>
+          ) :
+            <IoLogoGithub className="github" />}
         </Icon>
         <Icon>
-          <a href="#">
-            <IoLogoLinkedin className="linkedin" />
-          </a>
+          {linkedin ? (
+            <a href={linkedin}>
+              <IoLogoLinkedin className="linkedin" />
+            </a>
+          ) :
+            <IoLogoLinkedin className="linkedin" />}
         </Icon>
         <Icon>
-          {/* <a href="#"> */}
-          <IoLogoInstagram className="instagram" />
-          {/* </a> */}
+          {instagram ? (
+            <a href={instagram}>
+              <IoLogoInstagram className="instagram" />
+            </a>
+          ) :
+            <IoLogoInstagram className="instagram" />}
         </Icon>
       </ContactIcons>
     </CardContainer>
