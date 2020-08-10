@@ -23,7 +23,7 @@ export default createGlobalStyle`
     --senary: #331A38;
   
     --white: #fff;
-    --gray: #8a8c90;
+    --disabled: #8a8c90;
     --dark: #010101;
   }
 

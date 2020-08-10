@@ -32,13 +32,13 @@ export const ProfileImg = styled.img`
   display: block;
 `
 
-export const Name = styled.div`
+export const Name = styled.h1`
   font-family: Archivo;
   font-size: 1.5rem;
   font-weight: 500;
 `
 
-export const Localization = styled.div`
+export const Localization = styled.h3`
   font-family: Archivo;
   font-size: 0.8rem;
   font-weight: 600;
@@ -48,7 +48,7 @@ export const Localization = styled.div`
   padding-bottom: 1rem;
 `
 
-export const Bio = styled.div`
+export const Bio = styled.p`
   max-width: 90%;
 
   font-family: Archivo;
@@ -65,10 +65,54 @@ export const ToLearn = styled.div`
 
 `
 
-export const ToolsTitle = styled.div`
-
+export const ToolsTitle = styled.h3`
+  margin-top: 1rem;
+  font-family: Archivo;
+  font-size: 1rem;
+  color: ${props => props.color};
 `
 
-export const ToolsContent = styled.div`
+export const ToolsContent = styled.p`
+  padding-top: .3rem;
 
+  max-width: 90%;
+  margin: 0 auto;
+
+  font-family: Archivo;
+  font-size: .8rem;
+`
+
+export const ContactIcons = styled.div`
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+`
+
+export const Icon = styled.span`
+  margin: 1rem .1rem 0 .1rem;
+  
+  font-size: 2.5rem;
+
+  color: var(--disabled);
+
+  > a svg {
+    transition: all .2s;
+  }
+
+  > a svg:hover {
+    transform: scale(1.05);
+  }
+
+  > a .github {
+    color: var(--dark);
+  }
+
+  > a .linkedin {
+    color: #0077B5;
+  }
+
+  > a .instagram {
+    color: #EC6B65;
+  }
 `

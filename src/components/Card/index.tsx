@@ -1,6 +1,8 @@
 import React from 'react'
 
-import { CardContainer, ProfileImg, Name, Localization, Bio, Learned, ToLearn, ToolsTitle, ToolsContent } from './styles'
+import { CardContainer, ProfileImg, Name, Localization, Bio, Learned, ToLearn, ToolsTitle, ToolsContent, ContactIcons, Icon } from './styles'
+
+import { IoLogoGithub, IoLogoLinkedin, IoLogoInstagram } from 'react-icons/io'
 
 const Card = () => {
   return (
@@ -11,14 +13,32 @@ const Card = () => {
       <Bio>Me chamo Lucas (🇧🇷) e sou desenvolvedor web front-end. Criar soluções (encantadoras) através da engenharia sempre fez meus olhos brilharem 😍, isso contribuiu para que eu me especializasse em áreas como programação 😵 e UI/UX 😱.</Bio>
 
       <Learned>
-        <ToolsTitle>Sou experiente em:</ToolsTitle>
+        <ToolsTitle color="var(--secondary)">Sou experiente em:</ToolsTitle>
         <ToolsContent>#React #Vue #Nuxt #TypeScript #SCSS</ToolsContent>
       </Learned>
 
       <ToLearn>
-        <ToolsTitle>Quero aprender</ToolsTitle>
+        <ToolsTitle color="var(--tertiary)">Quero aprender</ToolsTitle>
         <ToolsContent>#MachineLearning #MotionGraphics #Pixijs #Angularjs</ToolsContent>
       </ToLearn>
+
+      <ContactIcons>
+        <Icon>
+          <a href="#">
+            <IoLogoGithub className="github" />
+          </a>
+        </Icon>
+        <Icon>
+          <a href="#">
+            <IoLogoLinkedin className="linkedin" />
+          </a>
+        </Icon>
+        <Icon>
+          {/* <a href="#"> */}
+          <IoLogoInstagram className="instagram" />
+          {/* </a> */}
+        </Icon>
+      </ContactIcons>
     </CardContainer>
   )
 }

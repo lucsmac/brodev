@@ -5,7 +5,6 @@ import Header from '../../components/Header'
 import Input from '../../components/Input'
 import SetHead from '../../components/SetHead'
 import Footer from '../../components/Footer'
-import Button from '../../components/Button'
 
 interface EstadoProps {
   id: number,
