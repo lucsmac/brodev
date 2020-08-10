@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   > form {
-    padding: 4rem 0.75rem;
+    padding: 4rem 1.75rem;
     max-width: 500px;
     margin: 0 auto;
     display: flex;

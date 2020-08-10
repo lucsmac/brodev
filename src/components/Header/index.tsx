@@ -10,7 +10,9 @@ const Header: React.FC = ({ children }) => {
   return (
     <Container>
       <TopWrapper>
-        <Logo src={logoImg} alt="Brodev" />
+        <Link to="/" className="logo">
+          <Logo src={logoImg} alt="Brodev" />
+        </Link>
         <Link to="/">
           <IoIosClose />
         </Link>

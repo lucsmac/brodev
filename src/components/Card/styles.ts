@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 
 export const CardContainer = styled.div`
-  width: 100%;
+  max-width: 470px;
   padding: 1rem;
   padding-top: 65px;
+
+  background: var(--white);
 
   position: relative;
 
@@ -15,7 +17,13 @@ export const CardContainer = styled.div`
   text-align: center;
 
   box-shadow: rgba(0, 0, 0, .4) -3px 2px 10px;
-  border-radius: 16px;
+  border-radius: 28px;
+
+  @media (min-width: 560px) {
+    padding-top: 90px;
+
+    border-radius: 56px;
+  }
 `
 
 export const ProfileImg = styled.img`
@@ -30,6 +38,13 @@ export const ProfileImg = styled.img`
 
   box-shadow: rgba(0, 0, 0, .4) -2px 3px 10px;
   display: block;
+
+  @media (min-width: 560px) {
+    height: 150px;
+    width: 150px;
+
+    top: -75px;
+  }
 `
 
 export const Name = styled.h1`
@@ -46,6 +61,9 @@ export const Localization = styled.h3`
   opacity: .5;
   
   padding-bottom: 1rem;
+  @media (min-width: 560px) {
+    padding-bottom: 3rem;
+  }
 `
 
 export const Bio = styled.p`
@@ -55,31 +73,58 @@ export const Bio = styled.p`
   font-size: .9rem;
   
   opacity: .9;
+
+  @media (min-width: 560px) {
+    padding-bottom: .25rem;
+  }
 `
 
 export const Learned = styled.div`
-
+  width: 100%;
 `
 
 export const ToLearn = styled.div`
-
+  width: 100%;
 `
 
 export const ToolsTitle = styled.h3`
   margin-top: 1rem;
   font-family: Archivo;
   font-size: 1rem;
-  color: ${props => props.color};
+  color: var(--dark);
 `
 
-export const ToolsContent = styled.p`
+export const ToolsContent = styled.ul`
   padding-top: .3rem;
 
-  max-width: 90%;
+  width: 100%;
   margin: 0 auto;
 
   font-family: Archivo;
   font-size: .8rem;
+
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  > li {
+    display: inline-block;
+    padding: .4rem 0.75rem;
+    margin: .2rem;
+    border-radius: 5px;
+    
+    white-space: nowrap;
+    font-family: Archivo;
+    color: var(--primary);
+    font-weight: bold;
+    
+    background-color: ${(props) => props.color};
+  }
+
+  @media (min-width: 560px) {
+    width: 90%;
+  }
 `
 
 export const ContactIcons = styled.div`
@@ -87,6 +132,11 @@ export const ContactIcons = styled.div`
 
   align-items: center;
   justify-content: center;
+
+  @media (min-width: 560px) {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
 `
 
 export const Icon = styled.span`

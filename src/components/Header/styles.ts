@@ -16,6 +16,11 @@ export const TopWrapper = styled.div`
   grid-template-rows: 3fr;
   align-items: center;
 
+  > a.logo {
+    grid-column: 2/3; 
+    justify-self: center;
+  }
+
   > a {
     grid-column: 3/4;
     justify-self: end;
@@ -37,10 +42,6 @@ export const TopWrapper = styled.div`
 `
 
 export const Logo = styled.img`
-  grid-column: 2/3;
-
-  justify-self: center;
-
   transition: opacity 0.2s;
   opacity: 0.9;
 
