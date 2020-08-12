@@ -30,8 +30,8 @@ const Card: React.FC<ProfileProps> = ({ name, uf, city, avatar, bio, github, lin
       <Learned>
         <ToolsTitle>Sou experiente em:</ToolsTitle>
         <ToolsContent color="var(--quaternary)">
-          {learned && learned.map((learnedItem) => (
-            <li key={learnedItem}>#{learnedItem}</li>
+          {learned && learned.map((learnedItem, index) => (
+            <li key={`${learnedItem}-${index}`}>#{learnedItem}</li>
           ))}
         </ToolsContent>
       </Learned>
